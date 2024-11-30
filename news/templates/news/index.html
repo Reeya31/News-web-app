@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>News App</h1>
+            <div class="filters">
+                <select id="category">
+                    <option value="general">General</option>
+                    <option value="sports">Sports</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+                <input type="text" id="location" placeholder="Enter city">
+                <button id="fetch-news">Fetch News</button>
+            </div>
+        </header>
+        <main>
+            <div id="news-container"></div>
+        </main>
+    </div>
+</body>
+</html>
